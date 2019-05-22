@@ -1,0 +1,151 @@
+body {
+	padding-top: 90px;
+	font-family: DejaRip;
+	height: 100%;
+}
+
+a {
+	color: #490;
+}
+
+a:hover {
+	color: #6B0;
+}
+
+a:visited {
+	color: #380;
+}
+
+a.blacklink {
+	color: #000;
+}
+
+a.blacklink:hover {
+	color: #490;
+}
+
+nav.navbar {
+	border: 0;
+	background-color: #FFF;
+	opacity: 0.9;
+}
+
+nav.navbar .navbar-header {
+	margin-bottom: 0px;
+}
+
+nav.navbar a.navbar-brand {
+	color: #490;
+	margin-top: auto;
+	margin-bottom: auto;
+	font-family: Calluna;
+	font-size: 24px;
+}
+
+nav.navbar ul.nav li a {
+	font-size: 12px;
+	font-weight: bold;
+	color: #490;
+	text-transform: uppercase;
+	border-bottom: 3px #FFF solid;
+}
+
+nav.navbar ul.nav li a:hover {
+	color: #490;
+	background-color: #EEE;
+	border-bottom: 3px #380 solid;
+}
+
+nav.navbar ul.nav li.active a {
+	color: #333;
+	background-color: #FAFAFA;
+	border-bottom: 3px #6B0 solid;
+}
+
+article.entry {
+	border-top: 3px #EEE solid;
+	margin-bottom: 50px;
+}
+
+article.entry .metadata {
+	padding-top: 20px;
+	padding-right: 10px;
+	text-transform: uppercase;
+	font-family: DejaRip;
+	font-size: 14px;
+	font-weight: bold;
+	color: #888;
+}
+
+article.entry .companyname {
+	font-style: italic;
+	color: #666;
+}
+
+article.entry .section {
+	border-top: 3px #EEE solid;
+	padding-top: 5px;
+}
+
+article.entry .data {
+	text-align: justify;
+	font-size: 16px;
+	font-family: Calluna;
+}
+
+article.entry .seperator {
+	height: 50px;
+}
+
+article.entry img.img-fluid {
+	border: 1px #333 solid;
+	max-width: 50%;
+	float: right;
+	margin: 5px 0px 5px 15px;
+}
+
+article.entry .carousel {
+	border: 1px #333 solid;
+	float: right;
+	margin-left: 15px;
+	width: 50%;
+}
+
+article.entry .carousel-caption {
+	font-family: DejaRip;
+	font-size: 10px;
+}
+
+article.entry .carousel-caption a {
+	color: #fff;
+	background-color:rgba(0,0,0,0.1);
+	padding: 5px;
+}
+
+article.entry .alternative-links {
+	float: right;
+	font-family: DejaRip;
+	font-size: 10px;
+}
+
+.footer {
+	font-family: Calluna;
+	font-weight: normal;
+	font-style: normal;
+	background-color: #DDD;
+	border-top: 2px #BBB solid;
+	margin-top: 100px;
+	padding-top: 70px;
+	padding-bottom: 70px;
+}
+
+.footer {
+	padding: 10px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.footer p.meta {
+	margin-top: 25px;
+	text-align: center;
+}

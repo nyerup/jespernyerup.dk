@@ -1,0 +1,56 @@
+@font-face {
+	font-family: 'Calluna';
+	font-style: normal;
+	font-weight: bold;
+	src: local('Calluna'), url('/fonts/calluna-b.otf') format('opentype');
+	}
+
+@font-face {
+	font-family: 'Calluna';
+	font-style: italic;
+	font-weight: normal;
+	src: local('Calluna'), url('/fonts/calluna-i.otf') format('opentype');
+	}
+
+@font-face {
+	font-family: 'Calluna';
+	font-style: italic;
+	font-weight: bold;
+	src: local('Calluna'), url('/fonts/calluna-bi.otf') format('opentype');
+	}
+
+@font-face {
+	font-family: 'Calluna';
+	font-style: normal;
+	font-weight: normal;
+	src: local('Calluna'), url('/fonts/calluna-r.otf') format('opentype');
+	}
+
+@font-face {
+	font-family: 'DejaRip';
+	font-style: normal;
+	font-weight: bold;
+	src: local('DejaRip'), url('/fonts/dejarip-b.ttf') format('truetype');
+	}
+
+@font-face {
+	font-family: 'DejaRip';
+	font-style: italic;
+	font-weight: normal;
+	src: local('DejaRip'), url('/fonts/dejarip-i.ttf') format('truetype');
+	}
+
+@font-face {
+	font-family: 'DejaRip';
+	font-style: italic;
+	font-weight: bold;
+	src: local('DejaRip'), url('/fonts/dejarip-bi.ttf') format('truetype');
+	}
+
+@font-face {
+	font-family: 'DejaRip';
+	font-style: normal;
+	font-weight: normal;
+	src: local('DejaRip'), url('/fonts/dejarip-r.ttf') format('truetype');
+	}
+
