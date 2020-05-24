@@ -42,7 +42,7 @@ management, continuous integration, and telemetry.
   </tr>
   <tr>
     <th scope="row">Civil status</th>
-    <td>Married to Anette.<br>Father of Maise (b. 2006), Laura (b. 2008), and
+    <td>Divorced.<br>Father of Maise (b. 2006), Laura (b. 2008), and
     Elliot (b. 2012).</td>
   </tr>
   <tr>
@@ -67,17 +67,38 @@ management, continuous integration, and telemetry.
 <h3 class="section">
 <span class="metadata">2017 –<span style="color: #FFF">0000</span></span>
 <span class="companyname">Unity:</span>
-Infrastructure Team Lead
+Developer Services Team Lead
 </h3>
 
-Unity’s *Core Developer Services (CDS)* group oversee, develop, and maintain developer tooling
-and services catering the worldwide R&D vertical, mainly working on the Unity
-Engine and Editor.
+Unity’s *Developer Services (DS)* group oversee, develop, and maintain developer
+tooling and services catering the worldwide R&D vertical, mainly working on the
+Unity Engine and Editor.
 
-During my tenure in CDS so far, the group has expanded significantly, requiring
+During my tenure in DS so far, the group has expanded significantly, requiring
 efforts around scaling processes, renewing rituals, and ensuring and cultivating
 team cohesiveness. I have been heading up a few different constellations and
 initiatives, including:
+
+The *Release Tooling* team, working on:
+
+* Generally supporting Unity’s **Release Mangement** team, who have the overall
+  technical responsibility for the quality of Unity’s releases.
+* **Automated QA** by **bisection evaluation of batched changes** on all
+  mainline branches in the Unity code base.
+* Deep integration with public and internal **issue trackers** and quality
+  evaluation systems.
+* Handling artifacts and the mechanics around **publishing** new public and
+  restricted versions of Unity’s software, and facilitating stable and
+  performant **downloads of Unity** across the world.
+
+The *Source Control (VCS)* team, working on:
+
+* **Version control** of large code bases – millions of LOC, including NDA code from
+  many different partners, hundreds of thousands of revisions in tens of
+  thousands of branches.
+* Tooling, automation, execution and stakeholder management around
+  **converting** these code bases from one VCS to another.
+* **Automated delivery** of curated source code snapshots to partners.
 
 The *Build Farm* team, working on:
 
@@ -88,17 +109,6 @@ The *Build Farm* team, working on:
 * Migrating the group’s **cloud footprint** from AWS to GCP, as part of Unity’s
   strategic partnership with Google.
 * Automating builds of different types of **CI worker images**.
-* Handling artifacts and the mechanics around **publishing** new public and
-  restricted versions of Unity’s software.
-
-The *Source Control (VCS)* team, working on:
-
-* **Version control** of large code bases – millions of LOC, including NDA code from
-  many different partners, hundreds of thousands of revisions in tens of
-  thousands of branches.
-* Tooling, automation, execution and stakeholder management around
-  **converting** these code bases from one VCS to another.
-* **Automated delivery** of curated source code snapshots to partners.
 
 <h3 class="section">
 <span class="metadata">2016 – 2017</span>
@@ -220,6 +230,16 @@ Svanholmskolen, Ølstykke.
 ## Voluntary positions
 
 <h3 class="section">
+<span class="metadata">2020 –<span style="color: #FFF">0000</span></span>
+Chairman of the board
+</h3>
+
+*Kong Svend Gruppe, Det Danske Spejderkorps*
+
+Overall responsibility for the operations and economy of the local scout group,
+170-200 members strong.
+
+<h3 class="section">
 <span class="metadata">2017 –<span style="color: #FFF">0000</span></span>
 Rainbow scout
 </h3>
@@ -231,7 +251,7 @@ sure there's room for anyone, that everyone can be who they are, and love who
 they want.
 
 <h3 class="section">
-<span class="metadata">2014 –<span style="color: #FFF">0000</span></span>
+<span class="metadata">2014 – 2020</span></span>
 Scout leader, board member
 </h3>
 
