@@ -12,6 +12,8 @@ SSH_HOST=jespernyerup.dk
 SSH_PORT=22
 SSH_TARGET_DIR=/www/
 
+GSUTIL_BUCKET=gs://jespernyerup.dk
+
 
 DEBUG ?= 0
 ifeq ($(DEBUG), 1)
@@ -80,6 +82,9 @@ ssh_upload: publish
 
 rsync_upload: publish
 	rsync -e "ssh -p $(SSH_PORT)" -P -rvzc --cvs-exclude --delete $(OUTPUTDIR)/ $(SSH_USER)@$(SSH_HOST):$(SSH_TARGET_DIR)
+
+gsutil_upload: publish
+	gsutil -m rsync -r $(OUTPUTDIR)/ $(GSUTIL_BUCKET)/
 
 
 .PHONY: html help clean regenerate serve serve-global devserver stopserver publish ssh_upload rsync_upload
