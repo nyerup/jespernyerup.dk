@@ -52,7 +52,7 @@ $('#instagram').carousel(interval=10000)
 
 This is my personal web space. Welcome.
 
-I'm Jesper, father of Maise, Laura, and Elliot, married to Anette. I live in
+I'm Jesper, father of Maise, Laura, and Elliot. I live in
 <a href="/contact/">Måløv</a>, a suburb west of Copenhagen, Denmark.
 
 During the day I work at <a href="https://unity.com/">Unity</a>, a company
