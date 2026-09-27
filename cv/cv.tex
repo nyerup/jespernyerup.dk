@@ -1,0 +1,273 @@
+\documentclass[10pt,a4paper]{moderncv}
+
+% The style does \colorlet{bodyrulecolor}{color1}, which copies color1 as it
+% stands at that moment - so the colour scheme has to be loaded first, or the
+% rules and section headings come out black.
+\moderncvcolor{green}
+\moderncvstyle{casual}
+%\renewcommand{\familydefault}{\sfdefault}
+\renewcommand{\familydefault}{bch}
+
+\usepackage[utf8]{inputenc}
+
+\usepackage[scale=0.75]{geometry}
+\usepackage{color}
+\definecolor{white}{rgb}{1,1,1}
+\definecolor{gray}{rgb}{0.75,0.75,0.75}
+\definecolor{black}{rgb}{0,0,0}
+
+\usepackage{multicol}
+\usepackage{changepage}
+\usepackage{enumitem}
+\setitemize{noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt}
+
+\newcommand{\one}{\textbf{1}\textcolor{gray}{2345}}
+\newcommand{\two}{\textcolor{gray}{1}\textbf{2}\textcolor{gray}{345}}
+\newcommand{\three}{\textcolor{gray}{12}\textbf{3}\textcolor{gray}{45}}
+\newcommand{\four}{\textcolor{gray}{123}\textbf{4}\textcolor{gray}{5}}
+\newcommand{\five}{\textcolor{gray}{1234}\textbf{5}}
+
+\firstname{}
+%\familyname{Jesper Nyerup}
+\familyname{\textcolor{black}{Jesper Nyerup}\\}
+%\address{Kratvej 43}{2760 Måløv}
+%\phone{(+45) 2818 2024}
+%\mobile{}
+%\email{jesper@dahlnyerup.dk}
+%\homepage{jespernyerup.dk}
+%\extrainfo{}
+\photo[80pt][0pt]{nyerup-2019.jpg}
+
+\begin{document}
+
+\makecvtitle
+
+\vspace{-30pt}
+\section{Summary}
+\cvitem{}{
+	Empathetic leader and people manager, with integrity, strong technical
+	background, and a talent for getting stuff to work.
+}
+
+\cvitem{}{
+	Focus on team development through cultural cohesiveness, sensible direction,
+	and building on individual strengths. Advocating sound engineering
+	practices, conscious choices in ways of working, and strong alignment of
+	expectations.
+}
+
+\cvitem{}{
+	Background as software developer and system architect, working with projects
+	ranging from low level data center infrastructure, networking, through
+	telemetry and instrumentation, to design and implementation of complex
+	microservice software systems.
+}
+
+\section{Personal data}
+\begin{multicols}{2}
+\cvitem{Full name}{Jesper Dahl Nyerup.}
+\cvitem{Address}{Kratvej 43\newline{}
+2760 Måløv\newline{}
+Denmark}
+\cvitem{Phone}{(+45) 2818 2024}
+\cvitem{Email}{<\texttt{jesper@dahlnyerup.dk}>}
+\cvitem{Date of birth}{March 26, 1982.}
+\cvitem{Children}{Maise (b. 2006),\newline{}
+Laura (b. 2008), and Elliot (b. 2012).}
+\end{multicols}
+
+\section{Experience}
+\cventry{2026--\textcolor{white}{0000}}{Owner}{Vestigia}{Copenhagen}{}{
+	\vspace{0pt} \textit{Kulturformidling} -- cultural mediation. Vestigia builds
+	the things that carry a story to the people it belongs to: \textbf{audio
+	guides}, information panels, \textbf{augmented reality}, and interactive
+	installations for museums and cultural institutions.\vspace{3pt}\\
+	The work spans \textbf{storytelling}, composition, \textbf{sound
+	production}, and \textbf{software development}, on the conviction that the
+	medium should serve the story rather than the other way around -- and that a
+	good story can stand being told quietly.
+}
+\cventry{2026--\textcolor{white}{0000}}{Senior Engineering Manager, Engine Services}{Unity}{Copenhagen}{}{
+	\vspace{0pt} Overall responsibility for \textbf{Engine CI velocity} -- the
+	speed and reliability of the feedback Unity's engine developers get on their
+	changes. Line manager for multiple teams.\vspace{3pt}\\
+	A good deal of current attention goes to \textbf{adopting agentic AI} in
+	Engine development, and to what that shift means for the tooling around it.
+}
+\cventry{2019--2026}{Engineering Manager, Engine Services}{Unity}{Copenhagen}{}{
+	\vspace{0pt} Heading up the teams building and running the tooling around
+	Unity's engine development -- continuous integration, version control,
+	release mechanics, and the automation tying the three together.\vspace{3pt}\\
+	\textit{Continuous integration and automated QA}:
+	\vspace{6pt}\begin{adjustwidth}{1em}{0pt}
+		\begin{itemize}
+			\item Building, maintaining, and developing Unity's in-house
+				\textbf{CI product}.
+			\item \textbf{High-volume parallelisation} of long-running build and
+				test jobs.
+			\item Replacing the \textbf{bisecting merge queue} supporting the
+				Unity Editor monorepo.
+			\item Deep integration with public and internal \textbf{issue
+				trackers} and quality evaluation systems.
+			\item Integration with a custom infrastructure product, delivering
+				support for all major \textbf{runtime platforms} for Unity.
+		\end{itemize}
+	\end{adjustwidth}\vspace{3pt}
+	\textit{Version control}:
+	\vspace{6pt}\begin{adjustwidth}{1em}{0pt}
+		\begin{itemize}
+			\item \textbf{Version control} of large code bases -- millions of
+				LOC, including NDA code from many different partners, hundreds
+				of thousands of revisions in tens of thousands of branches.
+			\item Migrating the Unity Editor monorepo \textbf{from Mercurial to
+				Git}.
+			\item Tooling and automation around automated \textbf{repository
+				transformations}, user access control, and tech analysis.
+			\item \textbf{Automated delivery} of curated source code snapshots
+				to partners.
+		\end{itemize}
+	\end{adjustwidth}\vspace{3pt}
+	\textit{Releases}:
+	\vspace{6pt}\begin{adjustwidth}{1em}{0pt}
+		\begin{itemize}
+			\item Supporting Unity's \textbf{Release Management} team, who have
+				the overall technical responsibility for the quality of Unity's
+				releases.
+			\item Handling artifacts and the mechanics around
+				\textbf{publishing} new public and restricted versions of
+				Unity's software, and facilitating stable and performant
+				\textbf{downloads of Unity} across the world.
+		\end{itemize}
+	\end{adjustwidth}\vspace{3pt}
+}
+\cventry{2019}{Project Manager, Data Center Migrations}{Unity}{Copenhagen}{}{
+	Managed the Developer Services division's evacuation of two legacy data
+	center presences, organically grown over the course of ten and four years
+	respectively. The footprint was migrated to public cloud infrastructure.
+}
+\cventry{2017--2019}{Team Lead, Build Farm}{Unity}{Copenhagen}{}{
+	\vspace{6pt}\begin{adjustwidth}{1em}{0pt}
+		\begin{itemize}
+			\item Maintaining and developing an in-house built \textbf{CI
+				product}, running >10,000 builds per day.
+			\item \textbf{Automating builds and tests} of the Unity Engine on a
+				multitude of different OSes, devices, consoles and portable
+				terminals.
+			\item Migrating the group's \textbf{cloud footprint} from AWS to
+				GCP, as part of Unity's strategic partnership with Google.
+			\item Automating builds of different types of \textbf{CI worker
+				images}.
+		\end{itemize}
+	\end{adjustwidth}
+}
+\cventry{2016--2017}{Systems Engineer -- Base Team Tech Lead}{One.com}{Copenhagen}{}{
+	\vspace{0pt} The \textit{Base} team in One.com manages the server infrastructure powering
+	anything from in-house developed web applications to our customers' web
+	sites. This includes:
+	\vspace{6pt}\begin{adjustwidth}{1em}{0pt}
+		\begin{itemize}
+			\item Automation of \textbf{OS deployment} and integration with
+				hardware from different vendors.
+			\item Tailored use of \textbf{container technology}, for OS or
+				application encapsulation.
+			\item \textbf{Configuration management} spanning different OSes and
+				environments.
+			\item \textbf{Telemetry}, visualization, ingestion and storage of
+				>100,000 time series data points per second.
+			\item \textbf{Monitoring}, health checking thousands of servers.
+			\item \textbf{Logging}, transporting >30,000 documents per second,
+				flow monitoring, indexing in Elastic, storage in Hadoop.
+			\item \textbf{VCS}, workflow, test, release and distribution
+				management of software packages and configuration management
+				artifacts.
+			\item \textbf{Central storage} installations, both block and NAS
+				solutions from different vendors.
+			\item Different \textbf{facility} and \textbf{networking services},
+				DNS, SMTP, NTP, BGP, firewalling, etc.
+		\end{itemize}
+	\end{adjustwidth}
+}
+\cventry{2012--2016}{Systems Engineer}{One.com}{Copenhagen}{}{
+	Architectural development and deployment, mainly on GNU/Linux systems.
+	Product development, and end-to-end responsibility for a number of
+	subsystems. Participation in operational watch rotation, supporting offshore
+	operations department.\\
+	Highlights:
+	\vspace{6pt}\begin{adjustwidth}{1em}{0pt}
+		\begin{itemize}
+			\item Implementation of \textbf{new container infrastructure} based
+				on Libvirt and Linux Containers.
+			\item \textbf{New customer product}: SSH and SFTP access to web
+				space data in an isolated, private environment.
+			\item Introduction of Chef \textbf{configuration management} setup,
+				replacing multiple instances of Puppet and CFEngine.
+			\item Deployment of PB-size \textbf{Ceph clusters}.
+		\end{itemize}
+	\end{adjustwidth}
+}
+\cventry{2008--2012}{Systems Administrator}{One.com}{Copenhagen}{}{
+	Operational administration and deployment of various internet services
+	running on GNU/Linux systems in a homogeneous production environment.
+	Managing NAS installations. Data center facility management. Participation
+	in operational watch rotation.\\
+	Highlights:
+	\vspace{6pt}\begin{adjustwidth}{1em}{0pt}
+		\begin{itemize}
+			\item \textbf{Storage virtualization} of some hundred TB user data
+				onto HDS storage installations comprising HNAS, AMS and VSP
+				systems.
+			\item Integration and deployment of Linux VServer based
+				\textbf{virtualization platform} on diskless, stateless host
+				nodes booting from nightly built images.
+			\item Expansion from two to five \textbf{data center} facilities.
+		\end{itemize}
+	\end{adjustwidth}
+}
+\cventry{2007--2008}{Student worker}{Armada Hosting (later Solido Hosting, then Sentia; now part of Accenture)}{Århus}{}{
+	System administration of GNU/Linux, BSD and Windows servers in a
+	heterogeneous production environment. Tech support. Participation in
+	operational watch rotation.
+}
+
+\newpage
+\section{Education}
+\cventry{2006--2008}{Advanced Computer Studies, Diploma Programme}{}{}{}{
+    \textit{Datamatiker AK}.\\
+    CEUS, Nykøbing F.\\
+    Courses in Computer Science, Software Design, Security, Operating Systems,
+    Network Architecture, etc.
+}
+
+\cventry{1998--2001}{Technical college}{}{}{}{
+    \textit{Højere Teknisk Eksamen (HTX)}.\\
+    Erhvervsskolen Hamlet, Hillerød.\\
+    Not completed.
+}
+
+\cventry{1988--1998}{Danish primary school}{}{}{}{
+    \textit{Folkeskole}.\\
+    Toftehøjskolen, Ølstykke.\\
+    Svanholmskolen, Ølstykke.
+}
+
+\section{Voluntary positions}
+\cventry{2020--2024}{Chairman of the board}{Kong Svend Gruppe}{Det Danske Spejderkorps}{}{
+	Overall responsibility for the operations and economy of the local scout
+	group, 170-200 members strong.
+}
+\cventry{2017--2020}{Rainbow scout}{Regnbuespejder}{Det Danske Spejderkorps}{}{
+	Helping young people to reflect on gender identity and sexuality. Trying to
+	make sure there's room for anyone, that everyone can be who they are, and
+	love who they want.
+}
+\cventry{2014--\textcolor{white}{0000}}{Scout leader}{Kong Svend Gruppe}{Det Danske Spejderkorps}{}{
+	Teaching bushcraft, science, culture, leadership and independence to
+	children aged 6-16.
+}
+\cventry{2009--2011}{Board member, treasurer}{Skåne-Sjælland Linux User
+Group}{}{}{
+	Once the world's largest Linux User Group, SSLUG has played an active part
+	in facilitating an active Linux and Open Source community in Denmark and
+	Southern Sweden for more than 20 years.
+}
+\end{document}
