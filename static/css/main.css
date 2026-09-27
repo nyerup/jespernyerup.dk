@@ -111,17 +111,6 @@ article.entry .carousel {
 	width: 50%;
 }
 
-article.entry .carousel-caption {
-	font-family: DejaRip;
-	font-size: 10px;
-}
-
-article.entry .carousel-caption a {
-	color: #fff;
-	background-color:rgba(0,0,0,0.1);
-	padding: 5px;
-}
-
 article.entry .alternative-links {
 	float: right;
 	font-family: DejaRip;
