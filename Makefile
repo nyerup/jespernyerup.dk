@@ -1,5 +1,6 @@
-PY?=python
-PELICAN?=pelican
+PY?=python3
+VENVDIR?=$(CURDIR)/.venv
+PELICAN?=$(VENVDIR)/bin/pelican
 PELICANOPTS=
 
 BASEDIR=$(CURDIR)
@@ -7,12 +8,9 @@ INPUTDIR=$(BASEDIR)/content
 OUTPUTDIR=$(BASEDIR)/output
 CONFFILE=$(BASEDIR)/pelicanconf.py
 PUBLISHCONF=$(BASEDIR)/publishconf.py
+CVDIR=$(BASEDIR)/cv
 
-SSH_HOST=jespernyerup.dk
-SSH_PORT=22
-SSH_TARGET_DIR=/www/
-
-GSUTIL_BUCKET=gs://jespernyerup.dk
+GCS_BUCKET=gs://jespernyerup.dk
 
 
 DEBUG ?= 0
@@ -29,6 +27,7 @@ help:
 	@echo 'Makefile for a pelican Web site                                           '
 	@echo '                                                                          '
 	@echo 'Usage:                                                                    '
+	@echo '   make venv                           create .venv and install Pelican   '
 	@echo '   make html                           (re)generate the web site          '
 	@echo '   make clean                          remove the generated files         '
 	@echo '   make regenerate                     regenerate files upon modification '
@@ -36,23 +35,36 @@ help:
 	@echo '   make serve [PORT=8000]              serve site at http://localhost:8000'
 	@echo '   make serve-global [SERVER=0.0.0.0]  serve (as root) to $(SERVER):80    '
 	@echo '   make devserver [PORT=8000]          serve and regenerate together      '
-	@echo '   make ssh_upload                     upload the web site via SSH        '
-	@echo '   make rsync_upload                   upload the web site via rsync+ssh  '
+	@echo '   make cv                             rebuild static/files/cv.pdf from cv/  '
+	@echo '   make upload                         publish the web site to $(GCS_BUCKET)'
 	@echo '                                                                          '
 	@echo 'Set the DEBUG variable to 1 to enable debugging, e.g. make DEBUG=1 html   '
 	@echo 'Set the RELATIVE variable to 1 to enable relative urls                    '
 	@echo '                                                                          '
 
-html:
+# Pelican and its dependencies live in a virtualenv in the working tree rather
+# than being installed system-wide. The other targets depend on this, so a
+# fresh clone only needs `make html`.
+venv: $(VENVDIR)/bin/pelican
+
+$(VENVDIR)/bin/pelican: requirements.txt
+	$(PY) -m venv $(VENVDIR)
+	$(VENVDIR)/bin/pip install --quiet --upgrade pip
+	$(VENVDIR)/bin/pip install --quiet -r requirements.txt
+
+html: venv
 	$(PELICAN) $(INPUTDIR) -o $(OUTPUTDIR) -s $(CONFFILE) $(PELICANOPTS)
 
 clean:
 	[ ! -d $(OUTPUTDIR) ] || rm -rf $(OUTPUTDIR)
 
-regenerate:
+distclean: clean
+	[ ! -d $(VENVDIR) ] || rm -rf $(VENVDIR)
+
+regenerate: venv
 	$(PELICAN) -r $(INPUTDIR) -o $(OUTPUTDIR) -s $(CONFFILE) $(PELICANOPTS)
 
-serve:
+serve: venv
 ifdef PORT
 	$(PELICAN) -l $(INPUTDIR) -o $(OUTPUTDIR) -s $(CONFFILE) $(PELICANOPTS) -p $(PORT)
 else
@@ -67,24 +79,35 @@ else
 endif
 
 
-devserver:
+devserver: venv
 ifdef PORT
 	$(PELICAN) -lr $(INPUTDIR) -o $(OUTPUTDIR) -s $(CONFFILE) $(PELICANOPTS) -p $(PORT)
 else
 	$(PELICAN) -lr $(INPUTDIR) -o $(OUTPUTDIR) -s $(CONFFILE) $(PELICANOPTS)
 endif
 
-publish:
+publish: venv
 	$(PELICAN) $(INPUTDIR) -o $(OUTPUTDIR) -s $(PUBLISHCONF) $(PELICANOPTS)
 
-ssh_upload: publish
-	scp -P $(SSH_PORT) -r $(OUTPUTDIR)/* $(SSH_USER)@$(SSH_HOST):$(SSH_TARGET_DIR)
+# Needs a LaTeX distribution. BasicTeX is enough and is a great deal smaller
+# than MacTeX:
+#
+#   brew install --cask basictex
+#   sudo tlmgr update --self
+#   sudo tlmgr install moderncv changepage enumitem latexmk fontawesome6 \
+#       marvosym lastpage charter multirow arydshln
+#
+cv:
+	cd $(CVDIR) && latexmk -pdf -silent cv.tex
+	cp $(CVDIR)/cv.pdf $(BASEDIR)/static/files/cv.pdf
 
-rsync_upload: publish
-	rsync -e "ssh -p $(SSH_PORT)" -P -rvzc --cvs-exclude --delete $(OUTPUTDIR)/ $(SSH_USER)@$(SSH_HOST):$(SSH_TARGET_DIR)
+# The sync deletes whatever is in the bucket but not in $(OUTPUTDIR). /bsr/ is
+# maintained outside this repository, so it has to be held back explicitly or
+# it goes on every publish.
+upload: publish
+	gcloud storage rsync --recursive --delete-unmatched-destination-objects \
+		--exclude='^bsr/' \
+		$(OUTPUTDIR)/ $(GCS_BUCKET)/
 
-gsutil_upload: publish
-	gsutil -m rsync -r $(OUTPUTDIR)/ $(GSUTIL_BUCKET)/
 
-
-.PHONY: html help clean regenerate serve serve-global devserver stopserver publish ssh_upload rsync_upload
+.PHONY: venv html help clean distclean regenerate serve serve-global devserver stopserver publish cv upload

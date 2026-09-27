@@ -1,2 +1,14 @@
 output/
 **/*.pyc
+
+# LaTeX build artifacts from cv/
+cv/cv.pdf
+cv/*.aux
+cv/*.fdb_latexmk
+cv/*.fls
+cv/*.log
+cv/*.out
+cv/*.synctex.gz
+
+# Python virtualenv created by `make venv`
+.venv/
