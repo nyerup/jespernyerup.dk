@@ -3,6 +3,7 @@ Menutitle: Contact
 Slug: contact
 url: /contact/
 order: 3
+Description: How to get in touch with Jesper Dahl Nyerup.
 
 <div class="row">
 <div class="col-sm-4">
@@ -24,11 +25,5 @@ Feel free to get in touch with me by email, through
 &lt;<jesper@dahlnyerup.dk>&gt;. I get a lot of email though, so I may take a
 little while to reply.
 
-If you need to send me encrypted messages, or verify my identity, you are
-welcome to use
-<a href="https://pgp.mit.edu/pks/lookup?op=get&search=0x71045C06472ADA5F">my PGP
-key</a>. I usually sign my emails, especially important ones and to people I've
-never written before.
-
-Please remember that email is not a secure mean of communication – don't assume
+Please remember that email is not a secure means of communication – don't assume
 it to be.

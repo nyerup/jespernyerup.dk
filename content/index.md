@@ -4,51 +4,37 @@ Slug: About
 url: /
 save_as: index.html
 order: 0
+Description: Jesper Dahl Nyerup – engineering leader at Unity, unix technician, scout, and father, living just west of Copenhagen.
 
-<div id="instagram" class="carousel slide" data-ride="carousel">
+<div id="photos" class="carousel slide" data-ride="carousel" data-interval="10000">
   <!-- Indicators -->
   <ol class="carousel-indicators">
-    <li data-target="#instagram" data-slide-to="0" class="active"></li>
-    <li data-target="#instagram" data-slide-to="1"></li>
-    <li data-target="#instagram" data-slide-to="2"></li>
+    <li data-target="#photos" data-slide-to="0" class="active"></li>
+    <li data-target="#photos" data-slide-to="1"></li>
+    <li data-target="#photos" data-slide-to="2"></li>
+    <li data-target="#photos" data-slide-to="3"></li>
   </ol>
 
   <!-- Wrapper for slides -->
   <div class="carousel-inner" role="listbox">
     <div class="item active">
-      <img src="/images/instagram1.jpg" alt="Instagram">
-      <div class="carousel-caption">
-        <a href="https://www.instagram.com/p/BlxlyWagWLf/"><span style="font-weight: bold;">nyerup</span> Tuscany [...]</a>
-      </div>
+      <img src="/images/nisse.jpg"
+      alt="Jesper in a red knitted nisse hat">
     </div>
     <div class="item">
-      <img src="/images/instagram2.jpg" alt="Instagram">
-      <div class="carousel-caption">
-        <a href="https://www.instagram.com/p/Bmoc1rvAqyJ/"><span style="font-weight: bold;">nyerup</span> Regnbuespejder [...]</a>
-      </div>
+      <img src="/images/snow.jpg"
+      alt="The four of us on a snowy balcony above Copenhagen">
     </div>
     <div class="item">
-      <img src="/images/instagram3.jpg" alt="Instagram">
-      <div class="carousel-caption">
-        <a href="https://www.instagram.com/p/BWcxi75BSxQ/"><span style="font-weight: bold;">nyerup</span> Sommerferie. #gråvejr</a>
-      </div>
+      <img src="/images/ruins.jpg"
+      alt="Three teenagers among lichen-covered stone ruins by the water">
+    </div>
+    <div class="item">
+      <img src="/images/kids.jpg"
+      alt="Maise, Laura, and Elliot lying in the grass, giving thumbs up">
     </div>
   </div>
-
-  <!-- Controls
-  <a class="left carousel-control" href="#instagram" role="button" data-slide="prev">
-    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="right carousel-control" href="#instagram" role="button" data-slide="next">
-    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a> -->
 </div>
-
-<script>
-$('#instagram').carousel(interval=10000)
-</script>
 
 This is my personal web space. Welcome.
 
@@ -57,12 +43,16 @@ I'm Jesper, father of Maise, Laura, and Elliot. I live in
 
 During the day I work at <a href="https://unity.com/">Unity</a>, a company
 building a widely used game engine, and a ton of services for the gaming
-industry. I spend most of my time there working with developer tooling,
-continuous integration, and version control.
+industry. I look after how quickly and how reliably our engine developers find
+out whether a change of theirs holds up – and the teams who build the tooling
+that tells them.
 
-When I'm not at work I spend my time cooking, gardening, playing the piano in
-<a href="https://betamix.dk/">a delightfully unsuccesful band</a>, teaching
-science, bushcraft, culture, and leadership to kids in
+On the side I run <a href="https://vestigia.dk/">Vestigia</a>, which makes audio
+guides, installations, and other ways of getting a story out of a place or a
+collection and into the heads of the people visiting it.
+
+When I'm not at work I spend my time cooking, gardening, playing the piano,
+teaching science, bushcraft, culture, and leadership to kids in
 <a href="https://kongsvend.dk/">the local scout group</a>, and – if any time
 remains – sailing anything with sails.
 

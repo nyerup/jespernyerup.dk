@@ -3,6 +3,7 @@ Menutitle: CV
 Slug: cv
 url: /cv/
 order: 1
+Description: Curriculum vitae for Jesper Dahl Nyerup – engineering leadership, developer tooling, continuous integration, version control, and unix infrastructure.
 
 <div class="alternative-links">
 <a href="https://linkedin.com/in/nyerup">LinkedIn</a> |
@@ -18,15 +19,17 @@ order: 1
 <img src="/images/nyerup.png" class="img-fluid" style="max-width: 40%"
 alt="Jesper Nyerup">
 
-Empathic leader and people manager, with integrity, strong technical
+Empathetic leader and people manager, with integrity, strong technical
 background, and a talent for getting stuff to work.
 
 Focus on team development through cultural cohesiveness, sensible direction, and
-building on individual strengths.
+building on individual strengths. Advocating sound engineering practices,
+conscious choices in ways of working, and strong alignment of expectations.
 
-Background as unix architect and technician, specializing in low level
-infrastructure, networking, virtualization, deployment automation, configuration
-management, continuous integration, and telemetry.
+Background as software developer and system architect, working with projects
+ranging from low level data center infrastructure, networking, through telemetry
+and instrumentation, to design and implementation of complex microservice
+software systems.
 
 ## Personal data
 
@@ -41,9 +44,8 @@ management, continuous integration, and telemetry.
     <td>March 26, 1982</td>
   </tr>
   <tr>
-    <th scope="row">Civil status</th>
-    <td>Divorced.<br>Father of Maise (b. 2006), Laura (b. 2008), and
-    Elliot (b. 2012).</td>
+    <th scope="row">Children</th>
+    <td>Maise (b. 2006), Laura (b. 2008), and Elliot (b. 2012).</td>
   </tr>
   <tr>
     <th scope="row">Address</th>
@@ -65,42 +67,87 @@ management, continuous integration, and telemetry.
 ## Experience
 
 <h3 class="section">
-<span class="metadata">2017 –<span style="color: #FFF">0000</span></span>
-<span class="companyname">Unity:</span>
-Developer Services Team Lead
+<span class="metadata">2026 –<span style="color: #FFF">0000</span></span>
+<span class="companyname">Vestigia:</span>
+Owner
 </h3>
 
-Unity’s *Developer Services (DS)* group oversee, develop, and maintain developer
-tooling and services catering the worldwide R&D vertical, mainly working on the
-Unity Engine and Editor.
+*Kulturformidling* – cultural mediation. Vestigia builds the things that carry a
+story to the people it belongs to: **audio guides**, information panels,
+**augmented reality**, and interactive installations for museums and cultural
+institutions.
 
-During my tenure in DS so far, the group has expanded significantly, requiring
-efforts around scaling processes, renewing rituals, and ensuring and cultivating
-team cohesiveness. I have been heading up a few different constellations and
-initiatives, including:
+The work spans **storytelling**, composition, **sound production**, and
+**software development**, on the conviction that the medium should serve the
+story rather than the other way around – and that a good story can stand being
+told quietly.
 
-The *Release Tooling* team, working on:
+<h3 class="section">
+<span class="metadata">2026 –<span style="color: #FFF">0000</span></span>
+<span class="companyname">Unity:</span>
+Senior Engineering Manager, Engine Services
+</h3>
 
-* Generally supporting Unity’s **Release Mangement** team, who have the overall
-  technical responsibility for the quality of Unity’s releases.
-* **Automated QA** by **bisection evaluation of batched changes** on all
-  mainline branches in the Unity code base.
+Overall responsibility for **Engine CI velocity** – the speed and reliability of
+the feedback Unity’s engine developers get on their changes. Line manager for
+multiple teams.
+
+A good deal of current attention goes to **adopting agentic AI** in Engine
+development, and to what that shift means for the tooling around it.
+
+<h3>
+<span class="metadata">2019 – 2026</span>
+<span class="companyname">Unity:</span>
+Engineering Manager, Engine Services
+</h3>
+
+Heading up the teams building and running the tooling around Unity’s engine
+development – continuous integration, version control, release mechanics, and
+the automation tying the three together.
+
+*Continuous integration and automated QA*:
+
+* Building, maintaining, and developing Unity’s in-house **CI product**.
+* **High-volume parallelisation** of long-running build and test jobs.
+* Replacing the **bisecting merge queue** supporting the Unity Editor monorepo.
 * Deep integration with public and internal **issue trackers** and quality
   evaluation systems.
+* Integration with a custom infrastructure product, delivering support for all
+  major **runtime platforms** for Unity.
+
+*Version control*:
+
+* **Version control** of large code bases – millions of LOC, including NDA code
+  from many different partners, hundreds of thousands of revisions in tens of
+  thousands of branches.
+* Migrating the Unity Editor monorepo **from Mercurial to Git**.
+* Tooling and automation around automated **repository transformations**, user
+  access control, and tech analysis.
+* **Automated delivery** of curated source code snapshots to partners.
+
+*Releases*:
+
+* Supporting Unity’s **Release Management** team, who have the overall technical
+  responsibility for the quality of Unity’s releases.
 * Handling artifacts and the mechanics around **publishing** new public and
   restricted versions of Unity’s software, and facilitating stable and
   performant **downloads of Unity** across the world.
 
-The *Source Control (VCS)* team, working on:
+<h3>
+<span class="metadata">2019</span>
+<span class="companyname">Unity:</span>
+Project Manager, Data Center Migrations
+</h3>
 
-* **Version control** of large code bases – millions of LOC, including NDA code from
-  many different partners, hundreds of thousands of revisions in tens of
-  thousands of branches.
-* Tooling, automation, execution and stakeholder management around
-  **converting** these code bases from one VCS to another.
-* **Automated delivery** of curated source code snapshots to partners.
+Managed the Developer Services division’s evacuation of two legacy data center
+presences, organically grown over the course of ten and four years respectively.
+The footprint was migrated to public cloud infrastructure.
 
-The *Build Farm* team, working on:
+<h3>
+<span class="metadata">2017 – 2019</span>
+<span class="companyname">Unity:</span>
+Team Lead, Build Farm
+</h3>
 
 * Maintaining and developing an in-house built **CI product**, running >10,000
   builds per day.
@@ -181,7 +228,7 @@ watch rotation.
 Student worker
 </h3>
 
-*Now Solido Hosting, part of Sentia.*
+*Later Solido Hosting, then Sentia; now part of Accenture.*
 
 System administration of GNU/Linux, BSD and Windows servers in a heterogeneous
 production environment. Tech support. Participation in operational watch
@@ -230,7 +277,7 @@ Svanholmskolen, Ølstykke.
 ## Voluntary positions
 
 <h3 class="section">
-<span class="metadata">2020 –<span style="color: #FFF">0000</span></span>
+<span class="metadata">2020 – 2024</span>
 Chairman of the board
 </h3>
 
@@ -240,7 +287,7 @@ Overall responsibility for the operations and economy of the local scout group,
 170-200 members strong.
 
 <h3 class="section">
-<span class="metadata">2017 –<span style="color: #FFF">0000</span></span>
+<span class="metadata">2017 – 2020</span>
 Rainbow scout
 </h3>
 
@@ -251,8 +298,8 @@ sure there's room for anyone, that everyone can be who they are, and love who
 they want.
 
 <h3 class="section">
-<span class="metadata">2014 – 2020</span></span>
-Scout leader, board member
+<span class="metadata">2014 –<span style="color: #FFF">0000</span></span>
+Scout leader
 </h3>
 
 *Kong Svend Gruppe, Det Danske Spejderkorps*
