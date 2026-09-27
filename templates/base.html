@@ -1,21 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ DEFAULT_LANG }}">
 	<head>
 		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Jesper Nyerup</title>
+
+{% set section_title = (page.menutitle or page.title) if page else '' %}
+{% set full_title = SITENAME if output_file == 'index.html' or not section_title else section_title ~ ' – ' ~ SITENAME %}
+{% set description = page.description if page and page.description else SITEDESCRIPTION %}
+{% set canonical = SITEURL ~ (page.url if page else '/') %}
+
+		<title>{{ full_title }}</title>
+		<meta name="description" content="{{ description }}">
+		<meta name="author" content="{{ AUTHOR }}">
+		<link rel="canonical" href="{{ canonical }}">
+
+		<meta property="og:type" content="website">
+		<meta property="og:site_name" content="{{ SITENAME }}">
+		<meta property="og:title" content="{{ full_title }}">
+		<meta property="og:description" content="{{ description }}">
+		<meta property="og:url" content="{{ canonical }}">
+		<meta property="og:image" content="{{ SITEURL }}/images/nyerup.png">
+		<meta name="twitter:card" content="summary">
 
 		<link href="/css/bootstrap.min.css" rel="stylesheet">
 		<link href="/css/fonts.css" rel="stylesheet">
 		<link href="/css/main.css" rel="stylesheet">
 		<link rel="shortcut icon" href="/favicon.ico" />
 		<link rel="apple-touch-icon" href="/images/j.png" />
-
-		<!--[if lt IE 9]>
-		<script src="/js/html5shiv.js"></script>
-		<script src="/js/respond.min.js"></script>
-		<![endif]-->
 
 		<script src="/js/jquery.min.js"></script>
 		<script src="/js/bootstrap.min.js"></script>
@@ -68,34 +79,24 @@
 					</ul>
 					<h3>Meta</h3>
 					<ul>
-						<li><a href="http://creativecommons.org/licenses/by/3.0/">
+						<li><a href="https://creativecommons.org/licenses/by/4.0/">
 							License</a></li>
-						<li>Valid <a href="http://validator.w3.org/check/referer">
-							HTML</a> and
-							<a href="http://jigsaw.w3.org/css-validator/check/referer?profile=css3">
-							CSS</a></li>
 						<li>This site does not set cookies.</li>
 					</ul>
 				</div>
 				<div class="col-sm-3">
 					<h3>Services</h3>
 					<ul>
-						<li><a href="http://twitter.com/nyerup">@nyerup</a> on
-							Twitter</li>
-						<li><a href="http://github.com/nyerup">nyerup</a> on
+						<li><a href="https://github.com/nyerup">nyerup</a> on
 							Github</li>
 						<li><a href="https://www.linkedin.com/in/nyerup">in/nyerup</a>
 							on LinkedIn</li>
-						<li><a href="http://www.facebook.com/nyerup">nyerup</a>
-							on Facebook</li>
-						<li><a href="https://www.instagram.com/nyerup/">@nyerup</a>
-							on Instagram</li>
 					</ul>
 				</div>
 			</div>
 
 			<p class="meta">
-			<a href="http://creativecommons.org/licenses/by/3.0/">Copyright
+			<a href="https://creativecommons.org/licenses/by/4.0/">Copyright
 				&copy;</a> by Jesper Dahl Nyerup &lt;<a
 			href="mailto:jesper@dahlnyerup.dk">jesper@dahlnyerup.dk</a>&gt;
 			</p>
